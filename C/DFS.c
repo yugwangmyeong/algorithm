@@ -44,10 +44,6 @@ void addEdge(Graph* graph, int src, int dest) {
     newNode->next = graph->adjList[src];
     graph->adjList[src] = newNode;
 
-    // dest -> src (양방향일 경우)
-    newNode = createNode(src);
-    newNode->next = graph->adjList[dest];
-    graph->adjList[dest] = newNode;
 }
 
 // DFS 함수 (재귀)
