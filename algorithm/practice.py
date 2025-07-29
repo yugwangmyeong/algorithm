@@ -1,12 +1,9 @@
 import sys
 input = sys.stdin.readline
 
-n,m = map(int, input().split())
-grid = [list(map(int,input().split())) for _ in range(n)]
-visited = [[False]*m for _ in range(n)]
+N = input(int,input().strip())
+grid = [list(map(int,input().strip())) for _ in range(N)]
+visited = [[False] * N for _ in range(N)]
 
 
-from collections import deque
-queue = deque()
 
-print(grid)

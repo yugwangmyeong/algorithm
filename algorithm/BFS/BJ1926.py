@@ -18,7 +18,10 @@ input = sys.stdin.readline
 
 
 n,m = map(int, input().split())
-map = [list(map(int, input().split())) for _ in range(n)]
+
+#입력받을때 map함수쓰는이유는 input입력받을때 string으로받으니까 int형으로 변형하려고 쓰는것
+grid = [list(map(int, input().split())) for _ in range(n)]
+#일단 2차원배열 전부 False로 설정
 chk = [[False]*m for _ in range(n)]
 
 dy = [0,1,0,-1]
