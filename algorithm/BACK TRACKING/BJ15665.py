@@ -1,16 +1,18 @@
-#template
-
 import sys
 input = sys.stdin.readline
 
 N,M = map(int,input().split())
 nums = list[map(int,input().split())]
-rs = []
-used = [False] * N
 
-def recur():
+rs = []
+
+def recur(start):
     if len(rs) == M:
         print(' '.join(map(str,rs)))
         return
     for i in range(N):
-        used[i] = True
+        rs.append(nums[i])
+        recur(start)
+        rs.pop()
+        
+recur(0)
